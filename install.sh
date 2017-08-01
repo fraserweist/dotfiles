@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc screenrc vim"
+files="bashrc vimrc vim screenrc screen_layout"
 
 ##########
 
