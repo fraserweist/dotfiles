@@ -10,3 +10,6 @@
 [submodule "vim/bundle/airline-themes.git"]
 	path = vim/bundle/airline-themes.git
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/bundle/nerdtree-tabs.git"]
+	path = vim/bundle/nerdtree-tabs.git
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
