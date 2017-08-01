@@ -23,3 +23,5 @@ for file in $files; do
     echo "creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+rm -rf ~/dotfiles_old
