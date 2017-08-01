@@ -1,0 +1,6 @@
+vbell "off"
+bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
+term xterm-256color
+startup_message off
+source .screen_layout
+layout save def
