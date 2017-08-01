@@ -3,3 +3,14 @@ focus
 split
 focus
 focus
+screen -t vim
+screen -t build
+screen -t test
+screen -t svn/git
+screen -t finch
+select 0
+focus
+select 1
+focus
+select 2
+focus

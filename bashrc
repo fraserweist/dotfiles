@@ -115,7 +115,8 @@ if [[ $platform == 'linux' ]]; then
     alias subl='/usr/bin/subl'
 elif [[ $platform == 'mac' ]]; then
     alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
-    
+fi
+
 # watson.som.ma server ping alias
 alias wping='ping watson.som.ma'
 
