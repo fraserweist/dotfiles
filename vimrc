@@ -2,7 +2,6 @@ syntax on
 execute pathogen#infect()
 call pathogen#helptags()
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-let g:NERDTreeHijackNetrw=0
 let g:nerdtree_tabs_open_on_console_startup=2
 set t_Co=256
 set number
