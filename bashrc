@@ -81,14 +81,16 @@ YELLOW="\[\033[33m\]"
 GREEN="\[\033[01;32m\]"
 ORANGE="\[\033[01;38;5;202m\]"
 PURPLE="\[\033[1;34m\]"
-BLUE="\[\033[1;35m\]"
+RED="\[\033[1;31m\]"
+BLUE="\[\033[1;36m\]"
+WHITE="\[\033[1;37m\]"
 RESET="\[\033[00m\]"
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 if [ "$color_prompt" = yes ]; then
-    PS1="${YELLOW}[${debian_chroot:+($debian_chroot)}${GREEN}\u: ${ORANGE}\w${YELLOW}]${PURPLE}\$(parse_git_branch) ${BLUE}>>${RESET} "
+    PS1="${YELLOW}[${debian_chroot:+($debian_chroot)}${GREEN}\u: ${ORANGE}\w${YELLOW}]${WHITE}\$(parse_git_branch) ${PURPLE}>>${RESET} "
 else
     PS1='[ ${debian_chroot:+($debian_chroot)}\u: \w ] >> '
 fi

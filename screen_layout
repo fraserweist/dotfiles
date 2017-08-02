@@ -1,13 +1,13 @@
 split -v
 focus
 split
-focus
-focus
+focus prev
 screen -t vim
 screen -t build
 screen -t test
 screen -t svn/git
-screen -t finch
+screen -t profanity
+stuff "profanity -a work"
 select 0
 focus
 select 1

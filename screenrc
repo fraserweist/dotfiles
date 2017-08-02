@@ -8,3 +8,4 @@ layout save def
 bind ^w focus prev
 bind ^e focus
 bind ^k quit
+bind ^l windowlist -b
