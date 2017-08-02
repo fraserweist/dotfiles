@@ -5,7 +5,7 @@ colorscheme desert
 
 " line highlighting
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40 ctermbg=0 ctermfg=NONE
+hi CursorLine term=bold cterm=bold guibg=Grey40 ctermbg=233 ctermfg=NONE
 
 " cursor shape
 if $TERM_PROGRAM =~ "iTerm.app"

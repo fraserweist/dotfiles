@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim screenrc screen_layout"
+files="bashrc vimrc vim screenrc screen_layout muttrc mutt"
 
 ##########
 
@@ -16,7 +16,7 @@ echo "changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
     echo "moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/

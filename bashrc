@@ -12,6 +12,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
     platform='mac'
 fi
 
+export MAIL=/var/mail/fraserweist
+
 case $- in
     *i*) ;;
       *) return;;

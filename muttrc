@@ -1,0 +1,24 @@
+# Folder hooks
+folder-hook 'account.com.gmail.foo' 'source ~/.mutt/account.com.gmail.foo'
+folder-hook 'account.com.gmail.bar' 'source ~/.mutt/account.com.gmail.bar'
+
+# Default account
+source ~/.mutt/accounts/personal.account
+
+# Macros for switching accounts
+bind editor <space> noop
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/personal.account<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/interactions.account<enter><change-folder>!<enter>'
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
+
+# color scheme
+source ~/.mutt/colors/solarized.muttrc
