@@ -19,7 +19,9 @@ esac
 
 export TERM=xterm-256color
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
-xmodmap -e 'keycode 70=0x0000'
+if [[ $platform == 'linux' ]]; then
+    xmodmap -e 'keycode 70=0x0000'
+fi
 
 today() {
     echo -n "Today's date is: "
@@ -74,8 +76,19 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# colors
+YELLOW="\[\033[33m\]"
+GREEN="\[\033[01;32m\]"
+ORANGE="\[\033[01;38;5;202m\]"
+PURPLE="\[\033[1;34m\]"
+BLUE="\[\033[1;35m\]"
+RESET="\[\033[00m\]"
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[33m\][${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u: \[\033[01;38;5;202m\]\w\[\033[00m\]\[\033[33m\]] \[\033[37m\]>> '
+    PS1="${YELLOW}[${debian_chroot:+($debian_chroot)}${GREEN}\u: ${ORANGE}\w${YELLOW}]${PURPLE}\$(parse_git_branch) ${BLUE}>>${RESET} "
 else
     PS1='[ ${debian_chroot:+($debian_chroot)}\u: \w ] >> '
 fi
