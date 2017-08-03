@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc vim screenrc screen_layout muttrc mutt"
+files="applescripts bashrc bash_profile vimrc vim screenrc screen_layout tmux.conf tmux muttrc mutt"
 
 ##########
 
