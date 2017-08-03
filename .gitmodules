@@ -13,3 +13,6 @@
 [submodule "vim/bundle/nerdtree-tabs.git"]
 	path = vim/bundle/nerdtree-tabs.git
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "vim/bundle/surround.vim"]
+	path = vim/bundle/surround.vim
+	url = https://github.com/tpope/vim-surround.git

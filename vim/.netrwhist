@@ -1,10 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/fraserweist/dotfiles'
-let g:netrw_dirhist_2='/home/fweist/dotfiles'
-let g:netrw_dirhist_3='/Users/fraserweist/dotfiles/vim/bundle'
-let g:netrw_dirhist_4='/Users/fraserweist/dotfiles'
-let g:netrw_dirhist_5='/Users/fraserweist/Desktop/cs/interactions/branch/fweist'
-let g:netrw_dirhist_6='/Users/fraserweist/dotfiles/vim/startup'
-let g:netrw_dirhist_7='/Users/fraserweist/Desktop/cs/interactions/branch/fweist'
-let g:netrw_dirhist_8='/Users/fraserweist/dotfiles/tmux'
+let g:netrw_dirhist_cnt =0
