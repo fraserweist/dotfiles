@@ -1,6 +1,8 @@
-# ~/b.ashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+
+export PATH=~/.bin:/home/fweist/bin:/home/fweist/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fweist/.vimpkg/bin:/usr/local/opt/coreutils/libexec/gnubin
 
 platform='unknown'
 unamestr=`uname`
@@ -118,7 +120,7 @@ fi
 
 # some more ls aliases
 export LSCOLORS=GxFxCxDxBxegedabagaced
-alias ls='ls -G'
+alias ls='ls -Gh'
 alias la='ls -A'
 alias ll='ls -alF'
 
@@ -151,5 +153,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-export PATH=~/.bin:/home/fweist/bin:/home/fweist/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fweist/.vimpkg/bin
