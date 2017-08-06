@@ -124,6 +124,7 @@ alias ls='ls -Gh'
 alias la='ls -A'
 alias ll='ls -alF'
 
+alias vim='/usr/local/Cellar/vim/8.0.0844/bin/vim'
 # sublime text alias
 if [[ $platform == 'linux' ]]; then
     alias subl='/usr/bin/subl'

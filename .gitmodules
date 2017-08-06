@@ -25,3 +25,6 @@
 [submodule "vim/bundle/rename.git"]
 	path = vim/bundle/rename.git
 	url = https://github.com/danro/rename.vim.git
+[submodule "vim/bundle/gruvbox.git"]
+	path = vim/bundle/gruvbox.git
+	url = https://github.com/morhetz/gruvbox
