@@ -22,3 +22,6 @@
 [submodule "vim/bundle/surround.git"]
 	path = vim/bundle/surround.git
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/rename.git"]
+	path = vim/bundle/rename.git
+	url = https://github.com/danro/rename.vim.git
