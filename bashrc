@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export PATH=~/.bin:/home/fweist/bin:/home/fweist/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fweist/.vimpkg/bin:/usr/local/opt/coreutils/libexec/gnubin
+export PATH=~/.bin:/home/fweist/bin:/home/fweist/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fweist/.vimpkg/bin:/usr/local/opt/coreutils/libexec/gnubin:/Library/TeX/texbin
 
 platform='unknown'
 unamestr=`uname`
