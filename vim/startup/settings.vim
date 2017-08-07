@@ -5,6 +5,7 @@ set shiftwidth=4
 set expandtab
 set scrolloff=12
 set autoindent
+set backspace=2
 
 " this automatically removes trailing whitespace when the file is saved
 function! <SID>RemoveTrailingWhitespace()
