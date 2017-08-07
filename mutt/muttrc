@@ -1,0 +1,28 @@
+set smtp_authenticators = 'gssapi:login'
+
+source ~/.mutt/sidebar.muttrc
+source ~/.mutt/accounts/personal.account
+
+# Folder hooks
+folder-hook Personal/* 'source ~/.mutt/account/personal.account'
+folder-hook Work/* 'source ~/.mutt/account/interactions.account'
+
+# Macros for switching accounts
+bind editor <space> noop
+macro index gp '<sync-mailbox><enter-command>source ~/.mutt/accounts/personal.account<enter><change-folder>!<enter>'
+macro index gw '<sync-mailbox><enter-command>source ~/.mutt/accounts/interactions.account<enter><change-folder>!<enter>'
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
+
+mailboxes =INBOX =[Gmail]/'All Mail' =[Gmail]/'Sent Mail' =[Gmail]/Drafts
+
+# color scheme
+source ~/.mutt/colors/gruvbox.muttrc

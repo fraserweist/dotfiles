@@ -1,0 +1,13 @@
+set sidebar_width=38
+set sidebar_visible=yes
+
+color sidebar_new yellow default
+
+bind index \ck sidebar-prev
+bind index \cj sidebar-next
+bind index \cn sidebar-open
+
+macro index B '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager B '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+macro index \cB '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager \cB '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
