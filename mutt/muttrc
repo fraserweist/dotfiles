@@ -1,5 +1,7 @@
 set smtp_authenticators = 'gssapi:login'
 
+# color scheme
+source ~/.mutt/colors/gruvbox.muttrc
 source ~/.mutt/sidebar.muttrc
 source ~/.mutt/accounts/personal.account
 
@@ -24,5 +26,3 @@ set record = ''
 
 mailboxes =INBOX =[Gmail]/'All Mail' =[Gmail]/'Sent Mail' =[Gmail]/Drafts
 
-# color scheme
-source ~/.mutt/colors/gruvbox.muttrc
