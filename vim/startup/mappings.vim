@@ -13,12 +13,12 @@ vnoremap <left> <Nop>
 vnoremap <right> <Nop>
 
 " tab navigation
-nmap <C-i> :tabnext<CR>
-nmap <C-u> :tabprevious<CR>
-imap <C-i> <ESC>:tabnext<CR>
-imap <C-u> <ESC>:tabprevious<CR>
-vmap <C-i> :tabnext<CR>
-vmap <C-u> :tabprevious<CR>
+nmap <C-o> :tabnext<CR>
+nmap <C-y> :tabprevious<CR>
+imap <C-o> <ESC>:tabnext<CR>
+imap <C-y> <ESC>:tabprevious<CR>
+vmap <C-o> :tabnext<CR>
+vmap <C-y> :tabprevious<CR>
 
 " buffer navigation
 nmap <C-h> :wincmd h<CR>
