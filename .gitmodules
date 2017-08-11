@@ -13,9 +13,6 @@
 [submodule "vim/bundle/nerdtree-tabs.git"]
 	path = vim/bundle/nerdtree-tabs.git
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
-[submodule "vim/bundle/multiple-cursors.git"]
-	path = vim/bundle/multiple-cursors.git
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "vim/bundle/nerdcommenter.git"]
 	path = vim/bundle/nerdcommenter.git
 	url = https://github.com/scrooloose/nerdcommenter.git
