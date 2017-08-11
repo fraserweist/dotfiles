@@ -3,7 +3,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 " nerdtree
-map <Leader>n <Plug>NERDTreeTabsToggle<CR>
+map <C-n> <Plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=2
 
 " airline
