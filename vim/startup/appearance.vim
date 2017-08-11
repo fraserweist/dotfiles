@@ -1,7 +1,6 @@
 " colorful things come first!
 syntax on
 set t_Co=256
-colorscheme gruvbox
 
 " line highlighting
 set cursorline
