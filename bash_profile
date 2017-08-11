@@ -1,1 +1,1 @@
-source ~/.bashrc
+if [[ $- = *i* ]]; then . ~/.bashrc; fi
