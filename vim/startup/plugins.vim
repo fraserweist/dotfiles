@@ -7,7 +7,7 @@ map <C-n> <Plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=2
 
 " airline
-let g:airline_theme = 'luna'
+let g:airline_theme = 'wombat'
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 let g:gruvbox_contrast_dark = 'hard'
