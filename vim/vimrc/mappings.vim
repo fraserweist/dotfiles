@@ -36,5 +36,13 @@ vmap <C-j> :wincmd j<CR>
 vmap <C-k> :wincmd k<CR>
 vmap <C-l> :wincmd l<CR>
 
-" nerdtree shortcut (should this go in mappings?)
+" nerdtree shortcut
 map <C-n> <Plug>NERDTreeTabsToggle<CR>
+
+" fugitive shortcuts
+nmap <leader>ga :Gwrite<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gp :Gpush<CR>
+vmap <leader>ga :Gwrite<CR>
+vmap <leader>gc :Gcommit<CR>
+vmap <leader>gp :Gpush<CR>
