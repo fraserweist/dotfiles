@@ -32541,7 +32541,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>452 358 918 381 0 0 1440 877 </string>
+	<string>452 450 918 381 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1440 900 0 0 1440 877 </string>
 	<key>NeverWarnAboutSpaces</key>
@@ -32612,26 +32612,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.67919921875</real>
+				<real>0.856353759765625</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.6109417368392791</real>
+				<real>0.66611545413394813</real>
 				<key>Red Component</key>
-				<real>0.50496372580528259</real>
+				<real>0.37074776040390134</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.82745110988616943</real>
+				<real>0.815338134765625</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.52549010515213013</real>
+				<real>0.51374165248125792</real>
 				<key>Red Component</key>
-				<real>0.67870986461639404</real>
+				<real>0.66677644752567122</real>
 			</dict>
 			<key>Ansi 14 Color</key>
 			<dict>
@@ -32690,26 +32690,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.645233154296875</real>
+				<real>0.632171630859375</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.49630379906352556</real>
+				<real>0.38770429494101516</real>
 				<key>Red Component</key>
-				<real>0.38974303659051657</real>
+				<real>0.21278494270518422</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.69411772489547729</real>
+				<real>0.744110107421875</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.38431364297866821</real>
+				<real>0.282674640417099</real>
 				<key>Red Component</key>
-				<real>0.55878645181655884</real>
+				<real>0.43806832872269297</real>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
@@ -32742,13 +32742,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.45490187406539917</real>
+				<real>0.29012702172622085</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.51372551918029785</real>
+				<real>0.31680119527571082</real>
 				<key>Red Component</key>
-				<real>0.57254910469055176</real>
+				<real>0.343475341796875</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -33501,7 +33501,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-11T14:32:05Z</date>
+	<date>2017-08-14T00:15:35Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
