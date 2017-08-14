@@ -12,7 +12,7 @@ vnoremap <down> <Nop>
 vnoremap <left> <Nop>
 vnoremap <right> <Nop>
 
-" tab navigation
+" buffer navigation
 nmap <C-o> :bnext<CR>
 nmap <C-y> :bprevious<CR>
 imap <C-o> <ESC>:bnext<CR>
@@ -22,7 +22,7 @@ vmap <C-y> :bprevious<CR>
 nmap <leader>bc :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
-" buffer navigation
+" window navigation
 nmap <C-h> :wincmd h<CR>
 nmap <C-j> :wincmd j<CR>
 nmap <C-k> :wincmd k<CR>
