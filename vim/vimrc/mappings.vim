@@ -41,8 +41,8 @@ map <C-n> <Plug>NERDTreeTabsToggle<CR>
 
 " fugitive shortcuts
 nmap <leader>ga :Gwrite<CR>
-nmap <leader>gc :Gcommit<CR>
+nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
 vmap <leader>ga :Gwrite<CR>
-vmap <leader>gc :Gcommit<CR>
+vmap <leader>gc :Gcommit<CR>i
 vmap <leader>gp :Gpush<CR>
