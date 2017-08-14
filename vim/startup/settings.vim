@@ -1,6 +1,7 @@
 " basic settings (tabs, indentation, show line numbers, scroll offset)
 set number
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set scrolloff=12
