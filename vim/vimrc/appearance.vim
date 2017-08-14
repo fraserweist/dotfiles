@@ -5,7 +5,7 @@ set t_Co=256
 " line highlighting
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40 ctermbg=236 ctermfg=NONE
-hi CursorLineNR term=bold cterm=bold guibg=Grey40 ctermbg=238 ctermfg=15
+hi CursorLineNR term=bold cterm=bold guibg=Grey40 ctermbg=238 ctermfg=9
 hi Directory guifg=#0000FF ctermfg=123
 
 " cursor shape

@@ -10,6 +10,7 @@ if [ "$platform" = "linux" ]; then
     alias subl="/opt/Sublime\ Text\ 2/sublime_text"
 elif [ "$platform" = "mac" ]; then
     alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+    alias chrome="open /Applications/Google\ Chrome.app"
 fi
 
 # watson.som.ma server ping alias
