@@ -27,7 +27,8 @@ setDefaults() {
   pmset_on=0
   output_tmux=0
   ascii=0
-  ascii_bar='=========='
+  ascii_bar='♥♥♥♥♥♥♥♥♥♥'
+  empty_bar='♡♡♡♡♡♡♡♡♡♡'
   good_color="1;32"
   middle_color="1;33"
   warn_color="0;31"
@@ -122,16 +123,16 @@ elif ((ascii)); then
   rounded_n=$(printf "%.0f" "$n")
 
   # Creates the bar
-  GRAPH=$(printf "[%-${barlength}s]" "${ascii_bar:0:rounded_n}")
+  GRAPH=$(printf "%-${barlength}s" "${ascii_bar:0:rounded_n}${empty_bar:rounded_n:10}")
 
 else
   GRAPH=$(spark 0 ${BATTERY_STATUS} 100 | awk '{print substr($0,4,3)}')
 fi
 
 if ((output_tmux)); then
-  printf "%s%s %s%s" "$COLOR" "[$BATTERY_STATUS%]" "$GRAPH" "#[default]"
+  printf "%s%s %s%s" "$COLOR" "$GRAPH" "[$BATTERY_STATUS%]" "#[default]"
 else
-  printf "\e[0;%sm%s %s \e[m\n"  "$COLOR" "[$BATTERY_STATUS%]"  "$GRAPH"
+  printf "\e[0;%sm%s %s \e[m\n"  "$COLOR" "$GRAPH" "[$BATTERY_STATUS%]"
 fi
 }
 
