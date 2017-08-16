@@ -7,7 +7,6 @@ set cursorline
 hi LineNR term=NONE cterm=NONE guibg=Grey40 ctermbg=NONE ctermfg=1
 hi CursorLine term=bold cterm=bold guibg=Grey40 ctermbg=236 ctermfg=NONE
 hi CursorLineNR term=bold cterm=bold guibg=Grey40 ctermbg=236 ctermfg=9
-hi Directory guifg=#0000FF ctermfg=123
 
 " cursor shape
 if exists('$TMUX')

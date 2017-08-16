@@ -3,22 +3,22 @@
 
 " Normal mode
 "          [ guifg, guibg, ctermfg, ctermbg, opts ]
-let s:N1 = [ '#CAE682', '#CAE682' , 232 , 192 ] " mode
-let s:N2 = [ '#CAE682' , '#32322F' , 192 , 238 ] " info
-let s:N3 = [ '#CAE682' , '#242424' , 192 , 235 ] " statusline
-let s:N4 = [ '#86CD74' , 113 ]                   " mode modified
+let s:N1 = [ '#141413' , '#DEB5FF' , 232 , 183 ] " mode
+let s:N2 = [ '#DEB5FF' , '#322F32' , 183 , 238 ] " info
+let s:N3 = [ '#DEB5FF' , '#242424' , 183 , 235 ] " statusline
+let s:N4 = [ '#C082F2' , 141 ]                   " mode modified
 
 " Insert mode
-let s:I1 = [ '#141413' , '#FDE76E' , 232 , 227 ]
-let s:I2 = [ '#FDE76E' , '#32322F' , 227 , 238 ]
-let s:I3 = [ '#FDE76E' , '#242424' , 227 , 235 ]
-let s:I4 = [ '#FADE3E' , 221 ]
+let s:I1 = [ '#141413' , '#B5D3F3' , 232 , 153 ]
+let s:I2 = [ '#B5D3F3' , '#32322F' , 153 , 238 ]
+let s:I3 = [ '#B5D3F3' , '#242424' , 153 , 235 ]
+let s:I4 = [ '#7CB0E6' , 111 ]
 
 " Visual mode
-let s:V1 = [ '#141413' , '#B5D3F3' , 232 , 153 ]
-let s:V2 = [ '#B5D3F3' , '#32322F' , 153 , 238 ]
-let s:V3 = [ '#B5D3F3' , '#242424' , 153 , 235 ]
-let s:V4 = [ '#7CB0E6' , 111 ]
+let s:V1 = [ '#CAE682', '#CAE682' , 232 , 192 ]
+let s:V2 = [ '#CAE682' , '#32322F' , 192 , 238 ]
+let s:V3 = [ '#CAE682' , '#242424' , 192 , 235 ]
+let s:V4 = [ '#86CD74' , 113 ]
 
 " Replace mode
 let s:R1 = [ '#141413' , '#E5786D' , 232 , 173 ]
@@ -27,7 +27,7 @@ let s:R3 = [ '#E5786D' , '#242424' , 173 , 235 ]
 let s:R4 = [ '#E55345' , 203 ]
 
 " Paste mode
-let s:PA = [ '#94E42C' , 47 ]
+let s:PA = [ '#82B93A' , 47 ]
 
 " Info modified
 let s:IM = [ '#40403C' , 238 ]
@@ -38,7 +38,7 @@ let s:IA = [ '#767676' , s:N3[1] , 243 , s:N3[3] , '' ]
 let g:airline#themes#fraser#palette = {}
 
 let g:airline#themes#fraser#palette.accents = {
-      \ 'red': [ '#E5786D' , '' , 203 , '' , '' ],
+      \ 'red': [ '#CC241D' , '' , 9 , '' , '' ],
       \ }
 
 let g:airline#themes#fraser#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
