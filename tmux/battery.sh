@@ -109,11 +109,6 @@ fi
 }
 
 print_status() {
-# Print the battery status
-if ((connected)); then
-  GRAPH="⚡"
-
-elif ((ascii)); then
   barlength=${#ascii_bar}
 
   # Divides BATTTERY_STATUS by 10 to get a decimal number; i.e 7.6
@@ -125,15 +120,11 @@ elif ((ascii)); then
   # Creates the bar
   GRAPH=$(printf "%-${barlength}s" "${ascii_bar:0:rounded_n}${empty_bar:rounded_n:10}")
 
-else
-  GRAPH=$(spark 0 ${BATTERY_STATUS} 100 | awk '{print substr($0,4,3)}')
-fi
-
-if ((output_tmux)); then
-  printf "%s%s %s%s" "$COLOR" "$GRAPH" "[$BATTERY_STATUS%]" "#[default]"
-else
-  printf "\e[0;%sm%s %s \e[m\n"  "$COLOR" "$GRAPH" "[$BATTERY_STATUS%]"
-fi
+    if ((output_tmux)); then
+      printf "%s%s %s%s" "$COLOR" "$GRAPH" "[$BATTERY_STATUS%]" "#[default]"
+    else
+      printf "\e[0;%sm%s %s \e[m\n"  "$COLOR" "$GRAPH" "[$BATTERY_STATUS%]"
+    fi
 }
 
 # Read args
