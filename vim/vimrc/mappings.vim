@@ -19,7 +19,7 @@ imap <C-o> <ESC>:bnext<CR>
 imap <C-y> <ESC>:bprevious<CR>
 vmap <C-o> :bnext<CR>
 vmap <C-y> :bprevious<CR>
-nmap <leader>bc :bp <BAR> bd #<CR>
+nmap <C-c> :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 
 " window navigation

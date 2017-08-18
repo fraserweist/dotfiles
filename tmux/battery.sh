@@ -162,7 +162,6 @@ while getopts ":g:m:w:tap" opt; do
   esac
 done
 
-
 run_battery
 apply_colors
 print_status
