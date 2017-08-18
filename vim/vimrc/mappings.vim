@@ -12,6 +12,10 @@ vnoremap <down> <Nop>
 vnoremap <left> <Nop>
 vnoremap <right> <Nop>
 
+" search wrap toggling
+nmap <leader>nw :set nowrapscan<CR>
+nmap <leader>yw :set wrapscan<CR>
+
 " buffer navigation
 nmap <C-o> :bnext<CR>
 nmap <C-y> :bprevious<CR>
