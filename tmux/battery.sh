@@ -1,27 +1,5 @@
 #!/bin/bash
 
-usage() {
-cat <<EOF
-battery: usage:
-
-  general:
-    -h, --help    print this message
-    -p            use pmset (more accurate)
-    -t            output tmux status bar format
-    -a            output ascii bar instead of spark's
-
-  colors:
-    -g <color>    good battery level      default: green or 1;32
-    -m <color>    middle battery level    default: yellow or 1;33
-    -w <color>    warn battery level      default: red or 0;31
-EOF
-}
-
-if [[ $1 == '-h' || $1 == '--help' || $1 == '-?' ]]; then
-  usage
-  exit 0
-fi
-
 # For default behavior
 setDefaults() {
   pmset_on=0
