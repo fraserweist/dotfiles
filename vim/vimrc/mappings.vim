@@ -1,3 +1,10 @@
+" set leader key
+let mapleader = ";"
+
+" faster file saving
+nmap <leader>w :w<CR>
+nmap <leader>q :wqa<CR>
+
 " unmap the arrow keys
 nnoremap <up> ddkP
 nnoremap <down> ddp
@@ -17,36 +24,20 @@ nmap <leader>nw :set nowrapscan<CR>
 nmap <leader>yw :set wrapscan<CR>
 
 " buffer navigation
-nmap <C-o> :bnext<CR>
-nmap <C-y> :bprevious<CR>
-imap <C-o> <ESC>:bnext<CR>
-imap <C-y> <ESC>:bprevious<CR>
-vmap <C-o> :bnext<CR>
-vmap <C-y> :bprevious<CR>
-nmap <C-c> :bp <BAR> bd #<CR>
-nmap <leader>bl :ls<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
+nnoremap <leader>x :bp <BAR> bd #<CR>
 
 " window navigation
-nmap <C-h> :wincmd h<CR>
-nmap <C-j> :wincmd j<CR>
-nmap <C-k> :wincmd k<CR>
-nmap <C-l> :wincmd l<CR>
-imap <C-h> :wincmd h<CR>
-imap <C-j> :wincmd j<CR>
-imap <C-k> :wincmd k<CR>
-imap <C-l> :wincmd l<CR>
-vmap <C-h> :wincmd h<CR>
-vmap <C-j> :wincmd j<CR>
-vmap <C-k> :wincmd k<CR>
-vmap <C-l> :wincmd l<CR>
+nmap <leader>h :wincmd h<CR>
+nmap <leader>j :wincmd j<CR>
+nmap <leader>k :wincmd k<CR>
+nmap <leader>l :wincmd l<CR>
 
 " nerdtree shortcut
-map <C-n> <Plug>NERDTreeTabsToggle<CR>
+map <leader>nn <Plug>NERDTreeTabsToggle<CR>
 
 " fugitive shortcuts
 nmap <leader>ga :Gwrite<CR>
 nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
-vmap <leader>ga :Gwrite<CR>
-vmap <leader>gc :Gcommit<CR>i
-vmap <leader>gp :Gpush<CR>
