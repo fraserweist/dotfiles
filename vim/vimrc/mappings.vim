@@ -41,3 +41,9 @@ map <leader>nn <Plug>NERDTreeTabsToggle<CR>
 nmap <leader>ga :Gwrite<CR>
 nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
+
+" nicely formatted curly braces
+imap <C-{> {<CR><CR>}<ESC>kA<Tab>
+
+" some unique debug syntax
+nmap <leader>debug oprintf("DEBUG: \n");<ESC>Bi

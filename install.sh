@@ -10,6 +10,13 @@ echo -e "\n\033[1;30m           (https://github.com/fraserweist/dotfiles)"
 
 echo -e "\n\033[1;31m  FOLDERS:\033[0;31m"
 
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    *)          machhine=Other;;
+esac
+
 for folder in *; do
     if [ "$folder" != "install.sh" ] && [ "$folder" != "runcom" ]; then
         ln -s ~/dotfiles/$folder ~
