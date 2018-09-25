@@ -1,8 +1,8 @@
 # for executable commands
-export PATH=~/.bin:/home/fweist/bin:/home/fweist/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fweist/.vimpkg/bin:/usr/local/opt/coreutils/libexec/gnubin:/Library/TeX/texbin
+export PATH=$PATH
 
 # for terminal type
-export TERM=xterm-256color
+export TERM=rxvt-unicode-256color
 
 # for ???
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
@@ -23,10 +23,6 @@ if [ "$unamestr" == 'Linux' ]; then
     platform='linux'
 elif [ "$unamestr" == 'Darwin' ]; then
     platform='mac'
-fi
-
-if [[ $platform == 'linux' ]]; then
-    xmodmap -e 'keycode 70=0x0000'
 fi
 
 # append to the history file, don't overwrite it

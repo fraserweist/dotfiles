@@ -1,7 +1,7 @@
 #define _background #202020
-#define _foreground #ecdcb3 
+#define _foreground #ecdcb3
 
-#define _color0 #000000 
+#define _color0 #000000
 #define _color1 #cd241d
 #define _color2 #4f8b29
 #define _color3 #d87221
@@ -18,23 +18,45 @@
 #define _color14 #78cec5
 #define _color15 #e4cfa5
 
-URxvt.font: xft:Meslo LG L DZ for Powerline:size=9
+URxvt.font: xft:Meslo\ LG\ L\ DZ\ for\ Powerline:size=13
 URxvt.termName: rxvt-unicode-256color
-urxvt*foreground: _foreground
-urxvt*background: _background
-urxvt*color0: _color0
-urxvt*color1: _color1
-urxvt*color2: _color2
-urxvt*color3: _color3
-urxvt*color4: _color4
-urxvt*color5: _color5
-urxvt*color6: _color6
-urxvt*color7: _color7
-urxvt*color8: _color8
-urxvt*color9: _color9
-urxvt*color10: _color10
-urxvt*color11: _color11
-urxvt*color12: _color12
-urxvt*color13: _color13
-urxvt*color14: _color14
-urxvt*color15: _color15
+urxvt*foreground: #ecdcb3
+urxvt*background: #202020
+urxvt*color0: #000000
+urxvt*color1: #cd241d
+urxvt*color2: #4f8b29
+urxvt*color3: #d87221
+urxvt*color4: #3663a2
+urxvt*color5: #7048be
+urxvt*color6: #4b999d
+urxvt*color7: #c7b397
+urxvt*color8: #58514a
+urxvt*color9: #fc4934
+urxvt*color10: #82ba3a
+urxvt*color11: #fb9a2f
+urxvt*color12: #5fabdb
+urxvt*color13: #ab64d1
+urxvt*color14: #78cec5
+urxvt*color15: #e4cfa5
+
+xterm*termName: xterm-256color
+xterm*faceName: Meslo LG L DZ for Powerline
+xterm*faceSize: 9
+xterm*foreground: #ecdcb3
+xterm*background: #202020
+xterm*color0: #000000
+xterm*color1: #cd241d
+xterm*color2: #4f8b29
+xterm*color3: #d87221
+xterm*color4: #3663a2
+xterm*color5: #7048be
+xterm*color6: #4b999d
+xterm*color7: #c7b397
+xterm*color8: #58514a
+xterm*color9: #fc4934
+xterm*color10: #82ba3a
+xterm*color11: #fb9a2f
+xterm*color12: #5fabdb
+xterm*color13: #ab64d1
+xterm*color14: #78cec5
+xterm*color15: #e4cfa5

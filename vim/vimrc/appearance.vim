@@ -1,6 +1,6 @@
 " colorful things come first!
-syntax on
 set t_Co=256
+syntax on
 
 " line highlighting
 set cursorline
