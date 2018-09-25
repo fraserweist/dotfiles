@@ -1,0 +1,4 @@
+#define _background #202020
+#define _foreground #ecdcb3 
+#define _color0 #000000 
+#define _color1 #cd241d
