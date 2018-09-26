@@ -1,6 +1,7 @@
 " colorful things come first!
 set t_Co=256
 syntax on
+set nohlsearch
 
 " line highlighting
 set cursorline
