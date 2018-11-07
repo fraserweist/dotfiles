@@ -1,6 +1,6 @@
 " colorful things come first!
-set t_Co=256
 syntax on
+set t_Co=256
 set nohlsearch
 
 " line highlighting

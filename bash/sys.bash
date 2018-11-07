@@ -2,7 +2,10 @@
 export PATH=$PATH
 
 # for terminal type
-export TERM=rxvt-unicode-256color
+case $TERM in
+xterm) export TERM=xterm;;
+screen) export TERM=screen;;
+esac
 
 # for ???
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
@@ -33,4 +36,3 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # make sure xterm is ready to rumble
-xrdb ~/.Xresources
