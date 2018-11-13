@@ -42,4 +42,4 @@ URxvt.termName: rxvt-unicode-256color
 
 xterm*termName: xterm-256color
 xterm*faceName: Inconsolata for Powerline
-xterm*faceSize: 12
+xterm*faceSize: 9
