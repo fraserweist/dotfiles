@@ -5,9 +5,11 @@ set nohlsearch
 
 " line highlighting
 set cursorline
-hi LineNR term=NONE cterm=NONE guibg=Grey40 ctermbg=NONE ctermfg=1
-hi CursorLine term=bold cterm=bold guibg=Grey40 ctermbg=236 ctermfg=NONE
-hi CursorLineNR term=bold cterm=bold guibg=Grey40 ctermbg=236 ctermfg=9
+hi LineNR term=NONE cterm=NONE guibg=NONE ctermbg=NONE ctermfg=8
+hi CursorLine term=bold cterm=bold guibg=NONE ctermbg=8 ctermfg=NONE
+hi CursorLineNR term=bold cterm=bold guibg=NONE ctermbg=8 ctermfg=7
+
+hi CtrlPMatch cterm=bold ctermfg=14 ctermbg=8
 
 " cursor shape
 if exists('$TMUX')

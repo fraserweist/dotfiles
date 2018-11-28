@@ -1,41 +1,21 @@
-#define _background #202020
-#define _foreground #ecdcb3
-
-#define _color0 #000000
-#define _color1 #cd241d
-#define _color2 #4f8b29
-#define _color3 #d87221
-#define _color4 #3663a2
-#define _color5 #7048be
-#define _color6 #4b999d
-#define _color7 #c7b397
-#define _color8 #58514a
-#define _color9 #fc4934
-#define _color10 #82ba3a
-#define _color11 #fb9a2f
-#define _color12 #5fabdb
-#define _color13 #ab64d1
-#define _color14 #78cec5
-#define _color15 #e4cfa5
-
-*foreground: #ecdcb3
-*background: #202020
-*color0: #000000
-*color1: #cd241d
-*color2: #4f8b29
-*color3: #d87221
-*color4: #3663a2
-*color5: #7048be
-*color6: #4b999d
-*color7: #c7b397
-*color8: #58514a
-*color9: #fc4934
-*color10: #82ba3a
-*color11: #fb9a2f
-*color12: #5fabdb
-*color13: #ab64d1
-*color14: #78cec5
-*color15: #e4cfa5
+*foreground: #c5c8c6
+*background: #151924
+*color0: #151924
+*color1: #a54249
+*color2: #40945d
+*color3: #cfde5f
+*color4: #5f6f9d
+*color5: #87678f
+*color6: #47b1a3
+*color7: #707880
+*color8: #2e3641
+*color9: #cc6672
+*color10: #68bd85
+*color11: #f3f78f
+*color12: #8192be
+*color13: #b294bb
+*color14: #8ddad0
+*color15: #c5c8c6
 
 URxvt.font: xft:Meslo\ LG\ L\ DZ\ for\ Powerline:size=13
 URxvt.termName: rxvt-unicode-256color
