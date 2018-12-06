@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 2]]; then
+    org="$1"
+    repo="$2"
+else
+    org="dpkg"
+    repo="$1"
+fi
+
+git clone bbgithub:fweist/$repo
+cd $repo
+git remote rename origin fweist
+git remote add origin bbgithub:$org/$repo
+git branch -u fweist/master
