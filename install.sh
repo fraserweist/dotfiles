@@ -57,10 +57,17 @@ fi
 
 cd ../scripts
 for file in *; do
-    ln -s $root/scripts/$file $HOME/bin
-    echo -e "    adding $file to $HOME/bin/"
-    chmod +x $HOME/bin/$file
+    sourceable="*.sh"
+    if [[ $file != $sourceable ]]; then
+        echo -e "    adding $file to $HOME/bin/"
+        ln -s $root/scripts/$file $HOME/bin
+        chmod +x $HOME/bin/$file
+    else
+        echo -e "    sourcing $file"
+        source $file
+    fi
 done
+cd ..
 
 echo " "
 
