@@ -42,8 +42,8 @@ nmap <leader>ga :Gwrite<CR>
 nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
 
-" nicely formatted curly braces
-imap <C-{> {<CR><CR>}<ESC>kA<Tab>
+" exit insert mode
+imap jj <ESC>
 
 " some unique debug syntax
 nmap <leader>debug oprintf("DEBUG: \n");<ESC>Bi
