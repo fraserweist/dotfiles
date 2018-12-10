@@ -11,8 +11,11 @@ let s:N4 = [ '#C082F2' , 5 ]                  " mode modified
 " Insert mode
 let s:I1 = [ '#141413' , '#B5D3F3' , 0 , 14 ]
 let s:I2 = [ '#B5D3F3' , '#32322F' , 14 , 8 ]
-let s:I3 = [ '#B5D3F3' , '#242424' , 14 , 0 ]
-let s:I4 = [ '#7CB0E6' , 6 ]
+let s:I3 = [ '#B5D3F3' , '#242424' , 0 , 14 ]
+let s:I4 = [ '#7CB0E6' , 1 ]
+
+" background status modified
+let s:SM = [ '#FFFFFF', '#000000', 15, 1 ]
 
 " Visual mode
 let s:V1 = [ '#CAE682', '#CAE682' , 0 , 10 ]
@@ -42,21 +45,21 @@ let g:airline#themes#fraser#palette.accents = {
 
 let g:airline#themes#fraser#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#fraser#palette.normal_modified = {
-    \ 'airline_a': [ s:N1[0] , s:N4[0] , s:N1[2] , s:N4[1] , ''     ] ,
-    \ 'airline_b': [ s:N4[0] , s:IM[0] , s:N4[1] , s:N2[3] , ''     ] ,
-    \ 'airline_c': [ s:N4[0] , s:N3[1] , s:N4[1] , s:N3[3] , ''     ] }
+    \ 'airline_a': [ s:N1[0] , s:N4[0] , s:N1[2] , s:N1[3] , ''     ] ,
+    \ 'airline_b': [ s:N4[0] , s:IM[0] , s:N2[2] , s:N2[3] , ''     ] ,
+    \ 'airline_c': [ s:N4[0] , s:N3[1] , s:SM[2] , s:SM[3] , ''     ] }
 
 let g:airline#themes#fraser#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#fraser#palette.insert_modified = {
-    \ 'airline_a': [ s:I1[0] , s:I4[0] , s:I1[2] , s:I4[1] , ''     ] ,
-    \ 'airline_b': [ s:I4[0] , s:IM[0] , s:I4[1] , s:I2[3] , ''     ] ,
-    \ 'airline_c': [ s:I4[0] , s:N3[1] , s:I4[1] , s:N3[3] , ''     ] }
+    \ 'airline_a': [ s:I1[0] , s:I4[0] , s:I1[2] , s:I1[3] , ''     ] ,
+    \ 'airline_b': [ s:I4[0] , s:IM[0] , s:I2[2] , s:I2[3] , ''     ] ,
+    \ 'airline_c': [ s:I4[0] , s:N3[1] , s:SM[2] , s:SM[3] , ''     ] }
 
 let g:airline#themes#fraser#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#fraser#palette.visual_modified = {
-    \ 'airline_a': [ s:V1[0] , s:V4[0] , s:V1[2] , s:V4[1] , ''     ] ,
-    \ 'airline_b': [ s:V4[0] , s:IM[0] , s:V4[1] , s:V2[3] , ''     ] ,
-    \ 'airline_c': [ s:V4[0] , s:N3[1] , s:V4[1] , s:N3[3] , ''     ] }
+    \ 'airline_a': [ s:V1[0] , s:V4[0] , s:V1[2] , s:V1[3] , ''     ] ,
+    \ 'airline_b': [ s:V4[0] , s:IM[0] , s:V2[1] , s:V2[3] , ''     ] ,
+    \ 'airline_c': [ s:V4[0] , s:N3[1] , s:SM[1] , s:SM[3] , ''     ] }
 
 let g:airline#themes#fraser#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
 let g:airline#themes#fraser#palette.replace_modified = {

@@ -43,7 +43,7 @@ nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
 
 " exit insert mode
-imap jj <ESC>
+imap jk <ESC>
 
 " some unique debug syntax
 nmap <leader>debug oprintf("DEBUG: \n");<ESC>Bi
