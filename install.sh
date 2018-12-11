@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-echo -e "\n\033[1;34m"
-echo -e "                         fraser weist's"
-echo -e "\033[1;35m"
+echo -e "\n"
+echo -e "                       \033[1;97;44m fraser weist's \033[1;35;49m\n"
 echo -e "          ___            ___    _____  ___  ___"
 echo -e "    _____/  / ______    /  /_  /  __/ /__/ /  / ____    ______"
 echo -e "   /  __   / /  __  \  /  __/ /  /_  ___  /  / / __ \  /  ___/"
@@ -21,7 +20,7 @@ case "${unameOut}" in
     *)          machhine=Other;;
 esac
 
-echo -e "\n\033[1;31m  FOLDERS:\033[0;31m"
+echo -e "\n \033[1;97;101m FOLDERS: \033[0;91;49m"
 for folder in *; do
     if [ "$folder" != "install.sh" ] && [ "$folder" != "runcom" ] && \
       [ "$folder" != "scripts" ]; then
@@ -32,7 +31,7 @@ for folder in *; do
     fi
 done
 
-echo -e "\n\033[1;33m  RC FILES:\033[0;33m"
+echo -e "\n \033[1;30;43m RC FILES: \033[0;33m"
 cd runcom
 for file in *; do
     ln -s $root/runcom/$file $HOME
@@ -41,7 +40,7 @@ for file in *; do
     echo -e "    linking $file at $HOME/.$file"
 done
 
-echo -e "\n\033[1;32m  SCRIPTS:\033[0;32m"
+echo -e "\n \033[1;30;42m SCRIPTS: \033[0;32;49m"
 echo -e "    (recreating $HOME/bin/)"
 rm -rf ~/bin
 mkdir ~/bin

@@ -4,10 +4,6 @@ set t_Co=256
 set nohlsearch
 
 " line highlighting
-set cursorline
-hi LineNR term=NONE cterm=NONE guibg=NONE ctermbg=NONE ctermfg=8
-hi CursorLine term=bold cterm=bold guibg=NONE ctermbg=8 ctermfg=NONE
-hi CursorLineNR term=bold cterm=bold guibg=NONE ctermbg=8 ctermfg=7
 
 hi CtrlPMatch cterm=bold ctermfg=14 ctermbg=8
 
