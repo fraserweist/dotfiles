@@ -16,5 +16,3 @@ alias wping='ping watson.som.ma'
 # resource bash
 alias refresh='source ~/.bashrc'
 alias xstart='xrdb ~/.Xresources; xterm'
-
-alias vim='/usr/bin/vim'

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cd ~/dotfiles || exit 1
 echo -e "\n"
 echo -e "                       \033[1;97;44m fraser weist's \033[1;35;49m\n"
 echo -e "          ___            ___    _____  ___  ___"
