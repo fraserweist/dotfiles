@@ -24,15 +24,9 @@ nmap <leader>nw :set nowrapscan<CR>
 nmap <leader>yw :set wrapscan<CR>
 
 " buffer navigation
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-h> :bprevious<CR>
+nnoremap <C-y> :bprevious<CR>
+nnoremap <C-o> :bnext<CR>
 nnoremap <leader>x :bp <BAR> bd #<CR>
-
-" window navigation
-nmap <leader>h :wincmd h<CR>
-nmap <leader>j :wincmd j<CR>
-nmap <leader>k :wincmd k<CR>
-nmap <leader>l :wincmd l<CR>
 
 " nerdtree shortcut
 map <leader>nn <Plug>NERDTreeTabsToggle<CR>
@@ -41,6 +35,9 @@ map <leader>nn <Plug>NERDTreeTabsToggle<CR>
 nmap <leader>ga :Gwrite<CR>
 nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
+
+map <leader>vp :VimuxPromptCommand<CR>
+map <leader>vl :VimuxRunLastCommand<CR>
 
 " exit insert mode
 imap jk <ESC>

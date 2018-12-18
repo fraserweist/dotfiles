@@ -25,3 +25,9 @@
 [submodule "vim/bundle/tabular.git"]
 	path = vim/bundle/tabular.git
 	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/bundle/vim-tmux-navigator.git"]
+	path = vim/bundle/vim-tmux-navigator.git
+	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "vim/bundle/vimux.git"]
+	path = vim/bundle/vimux.git
+	url = https://github.com/benmills/vimux

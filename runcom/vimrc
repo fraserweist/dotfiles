@@ -1,6 +1,6 @@
 
 "=============== source files ================"
+source ~/.vim/vimrc/appearance.vim
 source ~/.vim/vimrc/settings.vim
 source ~/.vim/vimrc/mappings.vim
 source ~/.vim/vimrc/plugins.vim
-source ~/.vim/vimrc/appearance.vim
