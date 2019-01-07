@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vimux.git"]
 	path = vim/bundle/vimux.git
 	url = https://github.com/benmills/vimux
+[submodule "vim/bundle/ale.git"]
+	path = vim/bundle/ale.git
+	url = https://github.com/w0rp/ale
