@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-h" ]; then
+    echo "usage: git kill-branch <remote> [<branch>]"
+    exit 0
+fi
+
 if [[ $# -eq 2 ]]; then
     remote="$1"
     branch="$2"

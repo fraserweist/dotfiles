@@ -23,6 +23,9 @@ vnoremap <right> <Nop>
 nmap <leader>nw :set nowrapscan<CR>
 nmap <leader>yw :set wrapscan<CR>
 
+" toggle cursorline
+nnoremap <leader>c :let &cc = &cc == '' ? '80' : ''<CR>
+
 " buffer navigation
 nnoremap <C-y> :bprevious<CR>
 nnoremap <C-o> :bnext<CR>

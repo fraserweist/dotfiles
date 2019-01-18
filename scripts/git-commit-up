@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-h" ]; then
+    echo "usage: git commit-up '<commit-message>'"
+    exit 0
+fi
+
 git add -uv
 git commit -m "$1"
 git push

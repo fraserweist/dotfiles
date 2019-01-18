@@ -14,3 +14,13 @@ set ttimeoutlen=10
 
 " vimux
 let g:VimuxUseNearest = 1
+
+" ale
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_linters = { 'python': ['flake8'], }
+
+hi ALEWarningSign ctermbg=11
+hi ALEErrorSign ctermbg=9
+hi ALEWarning ctermbg=11
+hi ALEError ctermbg=9

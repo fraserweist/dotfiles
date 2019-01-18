@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 
-remote="fweist"
-branch="$1"
+if [ "$1" == "-h" ]; then
+    echo "usage: git new-branch [<remote>] <branch>"
+    exit 0
+fi
+
+if [[ $# -eq 2 ]]; then
+    remote="$1"
+    branch="$2"
+else
+    remote="fweist"
+    branch="$1"
+fi
+
 git checkout master
 git pull --rebase origin master
 git checkout -b $branch

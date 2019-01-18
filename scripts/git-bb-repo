@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-h" ]; then
+    echo "usage: git bb-repo [<org>] <repo>"
+    exit 0
+fi
+
 if [ $# -eq 2 ]; then
     org="$1"
     repo="$2"

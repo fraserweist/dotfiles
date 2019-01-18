@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-h" ]; then
+    echo "usage: git commit-all '<commit-message>'"
+    exit 0
+fi
+
 git add -Av
 git commit -m "$1"
 git push
-
