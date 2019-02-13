@@ -1,6 +1,16 @@
-" pathogen takes control
-execute pathogen#infect()
-call pathogen#helptags()
+" where are the plugins going to live?
+call plug#begin('~/.vim/plugged')
+
+" plugin list!
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'w0rp/ale'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
+Plug 'tpope/vim-surround'
+
+call plug#end()
 
 " nerdtree
 let g:nerdtree_tabs_open_on_console_startup = 2
