@@ -9,6 +9,7 @@ Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-surround'
+Plug 'sukima/xmledit'
 
 call plug#end()
 
@@ -28,7 +29,8 @@ let g:VimuxUseNearest = 1
 " ale
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
-let g:ale_linters = { 'python': ['flake8'], }
+let g:ale_linters = { 'python': ['flake8'] }
+let g:ale_linter_aliases = { 'xsd': ['xml'] }
 
 hi ALEWarningSign ctermbg=11
 hi ALEErrorSign ctermbg=9
