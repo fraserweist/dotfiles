@@ -10,6 +10,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-surround'
 Plug 'sukima/xmledit'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 

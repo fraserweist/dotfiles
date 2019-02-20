@@ -24,9 +24,7 @@ else
 endif
 
 " highlighting for diff filenames
-augroup filetypedetect
-    au BufRead,BufNewFile Jenkinsfile set filetype=groovy
-augroup END
+au BufRead,BufNewFile Jenkinsfile setf groovy
 
 augroup CursorLine
     au!
