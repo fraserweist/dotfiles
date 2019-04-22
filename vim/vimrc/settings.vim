@@ -6,7 +6,6 @@ set expandtab       " tabs become spaces
 set scrolloff=12    " always keep 12 lines between cursor and screen edge
 set autoindent      " autoindent, why not?
 set backspace=2     " backspace works like normal (deletes over line breaks)
-set lazyredraw      " don't redraw during macros and shit like that
 
 " this automatically removes trailing whitespace when the file is saved
 function! <SID>RemoveTrailingWhitespace()
