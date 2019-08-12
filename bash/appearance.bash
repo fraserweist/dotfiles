@@ -19,7 +19,7 @@ SEP=""
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-PS1="${debian_chroot:+($debian_chroot)}${GREEN} \u ${GREEN_TO_BLUE}${BLUE} \w ${BLUE_TO_PURPLE}${PURPLE}\$(parse_git_branch) ${PURPLE_TO_RESET}${RESET} "
+PS1="${debian_chroot:+($debian_chroot)}${GREEN} \u ${GREEN_TO_BLUE}${BLUE} \w ${BLUE_TO_PURPLE}${PURPLE}\$(parse_git_branch) ${PURPLE_TO_RESET}${RESET}\n>> "
 
 # for ls colors
 export LSCOLORS=GxFxCxDxBxegedabagaced

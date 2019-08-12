@@ -139,5 +139,13 @@ hi SpellRare       guifg=NONE    guibg=#bd6bbd    guisp=#bd6bbd    gui=NONE    c
 
 hi javaScriptNumber          guifg=#ffff7b    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=123 ctermbg=NONE    cterm=NONE
 
+" ----
+" ALE
+" ----
+
+hi ALEWarningSign ctermbg=11
+hi ALEErrorSign ctermbg=9
+hi ALEWarning ctermbg=11 ctermfg=0
+hi ALEError ctermbg=9 ctermfg=0
 
 

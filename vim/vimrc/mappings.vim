@@ -39,8 +39,13 @@ nmap <leader>ga :Gwrite<CR>
 nmap <leader>gc :Gcommit<CR>i
 nmap <leader>gp :Gpush<CR>
 
+" vimux
 map <leader>vp :VimuxPromptCommand<CR>
 map <leader>vl :VimuxRunLastCommand<CR>
+
+" ale error navigation
+nmap <leader>ej :ALENext<CR>
+nmap <leader>ek :ALEPrevious<CR>
 
 " exit insert mode
 imap jk <ESC>

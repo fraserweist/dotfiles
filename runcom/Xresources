@@ -22,6 +22,6 @@ URxvt.termName: rxvt-unicode-256color
 
 xterm*termName: xterm-256color
 xterm*faceName: Inconsolata for Powerline
-xterm*faceSize: 9
+xterm*faceSize: 9.5
 xterm*selectToclipboard: true
 xterm*disallowedWindowOps: 20,21,SetXProp

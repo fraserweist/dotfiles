@@ -15,4 +15,7 @@ alias wping='ping watson.som.ma'
 
 # resource bash
 alias refresh='source ~/.bashrc'
-alias xstart='xrdb ~/.Xresources; xterm'
+alias xstart='xrdb ~/.Xresources; /usr/bin/xterm'
+
+# dpkg specific
+alias dpkg-sql='PGSERVICE=dpkgdb PAGER="less -S" psql'
