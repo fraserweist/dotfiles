@@ -1,7 +1,7 @@
 *foreground: #c5c8c6
 *background: #151924
 *color0: #151924
-*color1: #d0003f
+*color1: #a44863
 *color2: #40945d
 *color3: #cfde5f
 *color4: #5f6f9d
@@ -9,7 +9,7 @@
 *color6: #47b1a3
 *color7: #707880
 *color8: #2e3641
-*color9: #cc6672
+*color9: #df9fa7
 *color10: #68bd85
 *color11: #f3f78f
 *color12: #8192be
@@ -22,6 +22,6 @@ URxvt.termName: rxvt-unicode-256color
 
 xterm*termName: xterm-256color
 xterm*faceName: Inconsolata for Powerline
-xterm*faceSize: 9.5
+xterm*faceSize: 12
 xterm*selectToclipboard: true
 xterm*disallowedWindowOps: 20,21,SetXProp
