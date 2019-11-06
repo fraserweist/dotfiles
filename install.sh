@@ -23,7 +23,7 @@ case "${unameOut}" in
     *)          machhine=Other;;
 esac
 
-echo -e "\n \033[1;97;101m FOLDERS: \033[0;91;49m"
+echo -e "\n \033[1;30;101m FOLDERS: \033[0;91;49m"
 for folder in *; do
     if [ "$folder" != "install.sh" ] && [ "$folder" != "runcom" ] && \
       [ "$folder" != "scripts" ]; then
