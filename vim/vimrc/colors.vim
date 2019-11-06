@@ -49,7 +49,7 @@ hi MoreMsg         guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    cter
 " --------------
 " - Visual aid -
 " --------------
-hi MatchParen      guifg=#4242c6    guibg=#9c9cf7   guisp=#9c9cf7    gui=NONE    ctermfg=62 ctermbg=147    cterm=NONE
+hi MatchParen      guifg=#4242c6    guibg=#9c9cf7   guisp=#9c9cf7    gui=NONE    ctermfg=4 ctermbg=147    cterm=NONE
 hi Visual          guifg=NONE    guibg=#7b7b7b    guisp=#7b7b7b    gui=NONE    ctermfg=NONE ctermbg=8    cterm=NONE
 hi VisualNOS       guifg=NONE    guibg=#bd6bbd    guisp=#bd6bbd    gui=NONE    ctermfg=NONE ctermbg=133    cterm=NONE
 hi NonText         guifg=#7b7b7b    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=8 ctermbg=NONE    cterm=NONE
@@ -65,16 +65,25 @@ hi SpecialKey      guifg=#7b7b7b    guibg=NONE    guisp=NONE    gui=NONE    cter
 " --------------------------------
 " Variable types
 " --------------------------------
-hi Constant        guifg=#ff9c9c    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=217 ctermbg=NONE    cterm=NONE
-hi String          guifg=#73f7f7    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=123 ctermbg=NONE    cterm=NONE
-hi StringDelimiter guifg=#73f7f7    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=123 ctermbg=NONE    cterm=NONE
-hi Character       guifg=#73f7f7    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=123 ctermbg=NONE    cterm=NONE
-hi Number          guifg=#ffff7b    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=123 ctermbg=NONE    cterm=NONE
-hi Boolean         guifg=#ff9c9c    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=217 ctermbg=NONE    cterm=NONE
-hi Float           guifg=#ffff7b    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=228 ctermbg=NONE    cterm=NONE
 
-hi Identifier      guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=NONE ctermbg=NONE    cterm=NONE
-hi Function        guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=NONE ctermbg=NONE    cterm=NONE
+hi Delimiter       ctermfg=7
+hi Comment         ctermfg=8
+hi Underlined      ctermfg=4   cterm=underline
+hi Type            ctermfg=4
+hi String          ctermfg=11
+hi Keyword         ctermfg=2
+hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
+hi Function        ctermfg=4
+hi Identifier      ctermfg=7   cterm=NONE
+hi Statement       ctermfg=2   cterm=bold
+hi Constant        ctermfg=13
+hi Number          ctermfg=12
+hi Boolean         ctermfg=4
+hi Special         ctermfg=13
+hi Ignore          ctermfg=0
+hi PreProc         ctermfg=8   cterm=bold
+hi! link Operator  Delimiter
+hi! link Error     ErrorMsg
 
 " --------------------------------
 " Language constructs
@@ -84,9 +93,10 @@ hi Conditional     guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    cter
 hi Repeat          guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=NONE ctermbg=NONE    cterm=NONE
 hi Label           guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=NONE ctermbg=NONE    cterm=NONE
 hi Operator        guifg=#ffffff    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=NONE ctermbg=NONE    cterm=NONE
-hi Keyword         guifg=#ff9c9c    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=217 ctermbg=NONE    cterm=NONE
-hi Exception       guifg=#ff9c9c    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=217 ctermbg=NONE    cterm=NONE
-hi Comment         guifg=#a5ffa5    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=157 ctermbg=NONE    cterm=NONE
+hi Keyword         guifg=#ff9c9c    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=9 ctermbg=NONE    cterm=NONE
+hi Exception       guifg=#ff9c9c    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=9 ctermbg=NONE    cterm=NONE
+hi Comment         guifg=#a5ffa5    guibg=NONE    guisp=NONE    gui=NONE    ctermfg=9 ctermbg=NONE    cterm=NONE
+hi Function        ctermfg=9
 
 hi Special         guifg=#4242c6    guibg=#cecece    guisp=#cecece    gui=NONE    ctermfg=62 ctermbg=252    cterm=NONE
 hi SpecialChar     guifg=#4242c6    guibg=#cecece    guisp=#cecece    gui=NONE    ctermfg=62 ctermbg=252    cterm=NONE
