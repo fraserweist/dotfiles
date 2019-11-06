@@ -19,3 +19,6 @@ alias xstart='xrdb ~/.Xresources; /usr/bin/xterm'
 
 # dpkg specific
 alias dpkg-sql='PGSERVICE=dpkgdb PAGER="less -S" psql'
+alias hostname='hostname | sed "s/ip-1-71-105-180.drr1.bcpc.bloomberg.com/fweist-dev-terraform/g"'
+
+

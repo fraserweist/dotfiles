@@ -1,5 +1,5 @@
 # for executable commands
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
 # for terminal type
 case $TERM in
