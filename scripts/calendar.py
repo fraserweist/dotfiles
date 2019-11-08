@@ -1,9 +1,10 @@
 import curses
 import abc
 import dataclasses
+import enum
 
 DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"]
-HOURS = map(str, range(3, 9))
+HOURS = [f"{x}pm" for x in range(3, 9)]
 
 
 @dataclasses.dataclass
@@ -12,6 +13,11 @@ class Rect:
     y: int
     w: int
     h: int
+
+
+class Dir(enum.Enum):
+    HORIZONTAL = 1
+    VERTICAL = 2
 
 
 class Renderable(abc.ABC):
@@ -24,9 +30,9 @@ class Calendar(Renderable):
     def __init__(self, title):
         self.cols = []
         self.title = title
-        self.title_height = 5
-        self.x_margin = 8
-        self.y_margin = 5
+        self.title_height = 3
+        self.x_margin = 5
+        self.y_margin = 3
         for i in range(len(DAYS)):
             w = (curses.COLS - self.x_margin) // len(DAYS)
             h = curses.LINES - (self.title_height + self.y_margin)
@@ -52,21 +58,6 @@ class Calendar(Renderable):
             axis.render(screen)
 
 
-def draw_border(screen, rect, v_line, h_line, corner):
-    # left and right
-    for i_y in range(rect.h):
-        for i_x in [0, rect.w - 1]:
-            screen.addch(rect.y + i_y, rect.x + i_x, v_line)
-    # top and bottom
-    for i_y in [0, rect.h - 1]:
-        for i_x in range(rect.w):
-            screen.addch(rect.y + i_y, rect.x + i_x, h_line)
-    # corners
-    for i_y in [0, rect.h - 1]:
-        for i_x in [0, rect.w - 1]:
-            screen.addch(rect.y + i_y, rect.x + i_x, corner)
-
-
 class CalendarColumn(Renderable):
 
     def __init__(self, rect, day):
@@ -83,17 +74,63 @@ class CalendarColumn(Renderable):
         for i_y in range(self.rect.h):
             for i_x in range(self.rect.w):
                 pass
-                # screen.addch(self.rect.y + i_y, self.rect.x + i_x, '#')
+
+
+def draw_grid(screen, rect, units, direction, v_line, h_line, corner):
+    if direction == Dir.HORIZONTAL:
+        x_units = units
+        y_units = 1
+        horizontal = True
+    else:
+        x_units = 1
+        y_units = units
+        horizontal = False
+    width = (rect.w // x_units) * x_units
+    height = (rect.h // y_units) * y_units
+    # vertical lines
+    for i_y in range(height):
+        for i_x in list(range(0, rect.w + horizontal, rect.w // x_units)):
+            screen.addch(rect.y + i_y, rect.x + i_x, v_line)
+    # horizontal lines
+    for i_y in list(range(0, rect.h + (not horizontal), rect.h // y_units)):
+        for i_x in range(width):
+            screen.addch(rect.y + i_y, rect.x + i_x, h_line)
+    # corners
+    for i_y in list(range(0, rect.h + (not horizontal), rect.h // y_units)):
+        for i_x in list(range(0, rect.w + horizontal, rect.w // x_units)):
+            screen.addch(rect.y + i_y, rect.x + i_x, corner)
 
 
 class Axis(Renderable, abc.ABC):
-    @abc.abstractmethod
-    def draw_units(self):
-        pass
+    def draw_units(self, screen):
+        if self.dir == Dir.HORIZONTAL:
+            center_y = self.rect.y + self.rect.h // 2
+            for i in range(len(self.units)):
+                x = int(
+                    self.rect.x + (self.rect.w // len(self.units)) *
+                    (0.5 + i)
+                )
+                screen.addstr(
+                    center_y,
+                    x - len(self.units[i]) // 2,
+                    self.units[i]
+                )
+        else:
+            center_x = self.rect.x + self.rect.w // 2
+            for i in range(len(self.units)):
+                y = int(
+                    self.rect.y + (self.rect.h // len(self.units)) *
+                    (0.5 + i)
+                )
+                screen.addstr(
+                    y,
+                    center_x - len(self.units[i]) // 2,
+                    self.units[i]
+                )
 
     def render(self, screen):
-        draw_border(screen, self.rect, '|', '-', '+')
-        self.draw_units()
+        draw_grid(screen, self.rect, len(self.units), self.dir, '|', '-', '+')
+        self.draw_units(screen)
 
 
 class XAxis(Axis):
@@ -101,13 +138,11 @@ class XAxis(Axis):
         self.rect = Rect(
             x_margin - 1,
             title_height,
-            curses.COLS - x_margin + 1,
+            ((curses.COLS - x_margin + 1) // len(units)) * len(units),
             y_margin
         )
+        self.dir = Dir.HORIZONTAL
         self.units = units
-
-    def draw_units(self):
-        pass
 
 
 class YAxis(Axis):
@@ -116,12 +151,11 @@ class YAxis(Axis):
             0,
             title_height + y_margin - 1,
             x_margin,
-            curses.LINES - (title_height + y_margin) + 1
+            ((curses.LINES - (title_height + y_margin) + 1)
+                // len(units)) * len(units)
         )
+        self.dir = Dir.VERTICAL
         self.units = units
-
-    def draw_units(self):
-        pass
 
 
 def main(scr):
