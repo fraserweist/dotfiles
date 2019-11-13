@@ -45,19 +45,13 @@ done
 
 # RUNNABLE SCRIPTS
 echo -e "\n \033[1;30;42m SCRIPTS: \033[0;32;49m"
-echo -e "    (recreating $HOME/bin/)"
 rm -rf ~/bin
 mkdir ~/bin
 
-if [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
-    echo -e "    ($HOME/bin is already in PATH)"
-else
-    echo -e "    ($HOME/bin isn't in PATH, adding it)"
+if [[ ! ":$PATH:" == *":$HOME/bin:"* ]]; then
     PATH=$PATH:$HOME/bin
     export PATH
 fi
-
-# SOURCEABLE SCRIPTS
 cd $root/scripts
 for file in *; do
     sourceable="*.sh"
