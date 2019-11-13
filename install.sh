@@ -69,6 +69,10 @@ for file in *; do
         source $file
     fi
 done
+echo -e "\n \033[1;30;106m OTHER: \033[0;36;49m"
+cd ../powerline-fonts
+echo -e "    installing powerline fonts"
+./install.sh
 cd ..
 
 echo " "
