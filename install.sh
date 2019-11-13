@@ -21,6 +21,7 @@ case "${unameOut}" in
     *)          machhine=Other;;
 esac
 
+# PUTTING FOLDERS WHERE THEY BELONG IN HOME
 echo -e "\n \033[1;30;101m FOLDERS: \033[0;91;49m"
 for folder in *; do
     if [ "$folder" != "install.sh" ] && [ "$folder" != "runcom" ] && \
@@ -32,6 +33,7 @@ for folder in *; do
     fi
 done
 
+# VARIOUS DOTFILES AND RC FILES IN HOME
 echo -e "\n \033[1;30;43m RC FILES: \033[0;33m"
 cd $root/runcom
 for file in *; do
@@ -41,6 +43,7 @@ for file in *; do
     echo -e "    linking $file at $HOME/.$file"
 done
 
+# RUNNABLE SCRIPTS
 echo -e "\n \033[1;30;42m SCRIPTS: \033[0;32;49m"
 echo -e "    (recreating $HOME/bin/)"
 rm -rf ~/bin
@@ -54,7 +57,7 @@ else
     export PATH
 fi
 
-
+# SOURCEABLE SCRIPTS
 cd $root/scripts
 for file in *; do
     sourceable="*.sh"
@@ -68,21 +71,29 @@ for file in *; do
     fi
 done
 
+# INSTALL PACKAGES WITH A PACKAGE MANAGER
 cd $root
 echo -e "\n \033[1;30;106m PACKAGES: \033[0;36;49m"
 if [ -n "$(which yum)" ]; then
     while read pkg; do
-        echo -e "    installing package '$pkg'"
-        sudo yum install $pkg -y > /dev/null 2>&1
+        if rpm -q $pkg > /dev/null 2>&1; then
+            echo -e "    package '$pkg' already installed"
+        else
+            echo -e "    installing package '$pkg'"
+            sudo yum install $pkg -y > /dev/null 2>&1
+        fi
     done < 'packages'
 fi
 
 
 echo -e "\n \033[1;30;105m OTHER: \033[0;35;49m"
-cd $root/powerline-fonts
 echo -e "    installing powerline fonts"
+cd $root/powerline-fonts
 ./install.sh > /dev/null 2>&1
+echo -e "    installing vim plugins"
 cd $root
+vim +PlugInstall +qall > /dev/null 2>&1
+wait
 
 echo " "
 
