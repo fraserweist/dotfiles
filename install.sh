@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-LSEP=''
-
 cd ~/dotfiles || exit 1
 echo -e "\n"
 echo -e "                       \033[1;97;44m fraser weist's \033[1;35;49m\n"
@@ -13,8 +11,8 @@ echo -e "  \______/  \______/  \___/ /__/   /__/ /__/  \____/ /_____/ /__/"
 echo -e "\n\033[1;30m"
 echo -e "           (https://github.com/fraserweist/dotfiles)"
 
-
 root=$(pwd)
+hide=" > /dev/null 2>&1"
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -35,7 +33,7 @@ for folder in *; do
 done
 
 echo -e "\n \033[1;30;43m RC FILES: \033[0;33m"
-cd runcom
+cd $root/runcom
 for file in *; do
     ln -s $root/runcom/$file $HOME
     rm $HOME/.$file
@@ -57,7 +55,7 @@ else
 fi
 
 
-cd ../scripts
+cd $root/scripts
 for file in *; do
     sourceable="*.sh"
     if [[ $file != $sourceable ]]; then
@@ -69,11 +67,22 @@ for file in *; do
         source $file
     fi
 done
-echo -e "\n \033[1;30;106m OTHER: \033[0;36;49m"
-cd ../powerline-fonts
+
+cd $root
+echo -e "\n \033[1;30;106m PACKAGES: \033[0;36;49m"
+if [ -n "$(which yum)" ]; then
+    while read pkg; do
+        echo -e "    installing package '$pkg'"
+        sudo yum install $pkg -y > /dev/null 2>&1
+    done < 'packages'
+fi
+
+
+echo -e "\n \033[1;30;105m OTHER: \033[0;35;49m"
+cd $root/powerline-fonts
 echo -e "    installing powerline fonts"
-./install.sh
-cd ..
+./install.sh > /dev/null 2>&1
+cd $root
 
 echo " "
 
