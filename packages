@@ -1,4 +1,4 @@
-vim
+vim-enhanced
 tmux
 xterm
-xrdb
+xorg-x11-server-utils
