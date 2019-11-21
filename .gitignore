@@ -4,3 +4,4 @@ mutt/accounts/interactions.stuff
 *.swp
 vim/plugged
 bash/secrets.bash
+*.pyc
