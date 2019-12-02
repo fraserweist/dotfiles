@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+RESET="\033[00m"
+
+DARK="\033[0;97;"
+NORMAL="\033[0;30;4"
+LIGHT="\033[0;30;10"
+
+BLACK="${DARK}40m"
+RED="${NORMAL}1m"
+GREEN="${NORMAL}2m"
+YELLOW="${NORMAL}3m"
+BLUE="${NORMAL}4m"
+PURPLE="${NORMAL}5m"
+CYAN="${NORMAL}6m"
+GREY="${NORMAL}7m"
+
+B_BLACK=${DARK}100m
+B_RED=${LIGHT}1m
+B_GREEN=${LIGHT}2m
+B_YELLOW=${LIGHT}3m
+B_BLUE=${LIGHT}4m
+B_PURPLE=${LIGHT}5m
+B_CYAN=${LIGHT}6m
+WHITE=${LIGHT}7m
+
+COLOR_ARRAY=(
+    "$BLACK" "$RED" "$GREEN" "$YELLOW"
+    "$BLUE" "$PURPLE" "$CYAN" "$GREY"
+    "$B_BLACK" "$B_RED" "$B_GREEN" "$B_YELLOW"
+    "$B_BLUE" "$B_PURPLE" "$B_CYAN" "$WHITE"
+)
+
+echo -ne "\n"
+for i in {1..3}; do
+    for j in {0..7}; do
+        if [ $i -eq 2 ]; then
+            idx=$(printf "%02d" $j)
+            echo -ne "${COLOR_ARRAY[j]}   $idx   "
+        else
+            echo -ne "${COLOR_ARRAY[j]}        "
+        fi
+    done
+    echo -ne "$RESET\n"
+done
+
+for i in {1..3}; do
+    for j in {8..15}; do
+        if [ $i -eq 2 ]; then
+            idx=$(printf "%02d" $j)
+            echo -ne "${COLOR_ARRAY[j]}   $idx   "
+        else
+            echo -ne "${COLOR_ARRAY[j]}        "
+        fi
+    done
+    echo -ne "$RESET\n"
+done
+echo -ne "\n"
