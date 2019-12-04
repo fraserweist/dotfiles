@@ -1,28 +1,30 @@
 #!/usr/bin/env bash
 
 cd ~/dotfiles || exit 1
-echo -e "\n"
-echo -e "                       \033[1;97;44m fraser weist's \033[1;35;49m\n"
+echo -ne "$(color style:bold,fg:purple)"
 echo -e "          ___            ___    _____  ___  ___"
 echo -e "    _____/  / ______    /  /_  /  __/ /__/ /  / ____    ______"
 echo -e "   /  __   / /  __  \  /  __/ /  /_  ___  /  / / __ \  /  ___/"
 echo -e "  /  /_/  / /  /_/  / /  /_  /  __/ /  / /  / /  ___/ /___  / ___"
 echo -e "  \______/  \______/  \___/ /__/   /__/ /__/  \____/ /_____/ /__/"
-echo -e "\n\033[1;30m"
+echo -ne "$(color style:bold,fg:light_black)"
 echo -e "           (https://github.com/fraserweist/dotfiles)"
 
 root=$(pwd)
 hide=" > /dev/null 2>&1"
 
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    *)          machhine=Other;;
-esac
+function print_header {
+    name=$1
+    color=$2
+    echo -ne "\n"
+    echo -ne "$(color style:bold,fg:black,bg:$color)"
+    echo -ne " $name: "
+    echo -ne "$(color fg:$color)"
+    echo -ne "\n"
+}
 
 # PUTTING FOLDERS WHERE THEY BELONG IN HOME
-echo -e "\n \033[1;30;101m FOLDERS: \033[0;91;49m"
+print_header FOLDERS light_red
 for folder in *; do
     if [ "$folder" != "install.sh" ] && [ "$folder" != "runcom" ] && \
       [ "$folder" != "scripts" ]; then
@@ -34,7 +36,7 @@ for folder in *; do
 done
 
 # VARIOUS DOTFILES AND RC FILES IN HOME
-echo -e "\n \033[1;30;43m RC FILES: \033[0;33m"
+print_header RC_FILES yellow
 cd $root/runcom
 for file in *; do
     ln -s $root/runcom/$file $HOME
@@ -44,7 +46,7 @@ for file in *; do
 done
 
 # RUNNABLE SCRIPTS
-echo -e "\n \033[1;30;42m SCRIPTS: \033[0;32;49m"
+print_header SCRIPTS light_green
 rm -rf ~/bin
 mkdir ~/bin
 
@@ -67,7 +69,7 @@ done
 
 # INSTALL PACKAGES WITH A PACKAGE MANAGER
 cd $root
-echo -e "\n \033[1;30;106m PACKAGES: \033[0;36;49m"
+print_header PACKAGES light_cyan
 if [ -n "$(which yum)" ]; then
     while read pkg; do
         if rpm -q $pkg > /dev/null 2>&1; then
@@ -80,7 +82,7 @@ if [ -n "$(which yum)" ]; then
 fi
 
 
-echo -e "\n \033[1;30;105m OTHER: \033[0;35;49m"
+print_header OTHER light_purple
 echo -e "    installing powerline fonts"
 cd $root/powerline-fonts
 ./install.sh > /dev/null 2>&1

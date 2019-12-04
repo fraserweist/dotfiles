@@ -1,34 +1,15 @@
 #!/usr/bin/env bash
 
 RESET="\033[00m"
-
-DARK="\033[0;97;"
-NORMAL="\033[0;30;4"
-LIGHT="\033[0;30;10"
-
-BLACK="${DARK}40m"
-RED="${NORMAL}1m"
-GREEN="${NORMAL}2m"
-YELLOW="${NORMAL}3m"
-BLUE="${NORMAL}4m"
-PURPLE="${NORMAL}5m"
-CYAN="${NORMAL}6m"
-GREY="${NORMAL}7m"
-
-B_BLACK=${DARK}100m
-B_RED=${LIGHT}1m
-B_GREEN=${LIGHT}2m
-B_YELLOW=${LIGHT}3m
-B_BLUE=${LIGHT}4m
-B_PURPLE=${LIGHT}5m
-B_CYAN=${LIGHT}6m
-WHITE=${LIGHT}7m
-
 COLOR_ARRAY=(
-    "$BLACK" "$RED" "$GREEN" "$YELLOW"
-    "$BLUE" "$PURPLE" "$CYAN" "$GREY"
-    "$B_BLACK" "$B_RED" "$B_GREEN" "$B_YELLOW"
-    "$B_BLUE" "$B_PURPLE" "$B_CYAN" "$WHITE"
+    "$(color bg:black)" "$(color bg:red)"
+    "$(color bg:green)" "$(color bg:yellow,fg:black)"
+    "$(color bg:blue)" "$(color bg:purple)"
+    "$(color bg:cyan)" "$(color bg:grey)"
+    "$(color bg:light_black)" "$(color bg:light_red,fg:black)"
+    "$(color bg:light_green,fg:black)" "$(color bg:light_yellow,fg:black)"
+    "$(color bg:light_blue,fg:black)" "$(color bg:light_purple,fg:black)"
+    "$(color bg:light_cyan,fg:black)" "$(color bg:light_grey,fg:black)"
 )
 
 echo -ne "\n"

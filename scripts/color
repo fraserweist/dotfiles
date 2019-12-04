@@ -1,0 +1,56 @@
+#!/usr/bin/env python3.7
+
+import sys
+
+COLORS = [
+    "black",
+    "red",
+    "green",
+    "yellow",
+    "blue",
+    "purple",
+    "cyan",
+    "grey",
+]
+LIGHT_COLORS = [f"light_{color}" for color in COLORS]
+FG_SWITCHER = {}
+BG_SWITCHER = {}
+STYLE_SWITCHER = {
+    "normal": 0,
+    "bold": 1,
+    "italic": 3,
+    "underline": 4,
+}
+for i in range(len(COLORS)):
+    FG_SWITCHER[COLORS[i]] = i + 30
+    BG_SWITCHER[COLORS[i]] = i + 40
+for i in range(len(LIGHT_COLORS)):
+    FG_SWITCHER[LIGHT_COLORS[i]] = i + 90
+    BG_SWITCHER[LIGHT_COLORS[i]] = i + 100
+
+def get_ansi_code(style_str=None, fg_str=None, bg_str=None):
+    style = 0 # normal
+    fg = 97   # white
+    bg = 40   # black
+    if style_str:
+        style = STYLE_SWITCHER[style_str]
+    if fg_str:
+        fg = FG_SWITCHER[fg_str]
+    if bg_str:
+        bg = BG_SWITCHER[bg_str]
+    return f"\\033[{style};{fg};{bg}m"
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("usage: color_escape style:normal,fg:purple")
+        exit(1)
+    color_dict = {}
+    for command in sys.argv[1].split(','):
+        key, val = command.split(':')
+        color_dict[key] = val
+    result = get_ansi_code(
+        color_dict.get("style", None),
+        color_dict.get("fg", None),
+        color_dict.get("bg", None),
+    )
+    print(result)
