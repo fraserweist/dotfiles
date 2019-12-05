@@ -8,4 +8,3 @@ esac
 source ~/.bash/sys.bash
 source ~/.bash/aliases.bash
 source ~/.bash/appearance.bash
-source ~/.bash/secrets.bash
