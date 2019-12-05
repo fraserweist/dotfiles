@@ -28,6 +28,7 @@ for i in range(len(LIGHT_COLORS)):
     FG_SWITCHER[LIGHT_COLORS[i]] = i + 90
     BG_SWITCHER[LIGHT_COLORS[i]] = i + 100
 
+
 def get_ansi_code(style_str=None, fg_str=None, bg_str=None):
     style = 0 # normal
     fg = 97   # white
@@ -40,10 +41,16 @@ def get_ansi_code(style_str=None, fg_str=None, bg_str=None):
         bg = BG_SWITCHER[bg_str]
     return f"\\033[{style};{fg};{bg}m"
 
+
 if __name__ == "__main__":
+
+    if len(sys.argv) == 1:
+        print("\\033[00m")
+        exit(0)
     if len(sys.argv) != 2:
-        print("example usage: color_escape style:normal,fg:purple")
+        print("example usage: color style:normal,fg:purple")
         exit(1)
+
     color_dict = {}
     for command in sys.argv[1].split(','):
         key, val = command.split(':')

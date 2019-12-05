@@ -4,7 +4,51 @@ case $- in
       *) return;;
 esac
 
-# source all relevant bash config files
-source ~/.bash/sys.bash
-source ~/.bash/aliases.bash
-source ~/.bash/appearance.bash
+####################
+# ENV AND SETTINGS #
+####################
+
+# for executable commands
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# append to history file, resize gracefully
+shopt -s histappend
+shopt -s checkwinsize
+
+###########
+# ALIASES #
+###########
+
+# ls
+alias ls='ls --color=auto -Gh'
+alias la='ls -A'
+alias ll='ls -alF'
+
+# resource bash
+alias refresh='source ~/.bashrc'
+alias xstart='xrdb ~/.Xresources; /usr/bin/xterm'
+
+# dpkg specific
+alias dpkg-sql='PGSERVICE=dpkgdb PAGER="less -S" psql'
+alias hostname='hostname | sed "s/dev-10-34-5-3/fweist-dev/g"'
+
+##############
+# APPEARANCE #
+##############
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+user_section="$(color style:bold,fg:light_grey,bg:green) \u "
+dir_section="$(color style:bold,fg:light_grey,bg:blue) \w "
+git_section="$(color style:bold,fg:light_grey,bg:purple)\$(parse_git_branch) "
+final_prompt="$(color)\n>> "
+
+PS1="${user_section}${dir_section}${git_section}${final_prompt}"
+
+export LS_COLORS='fi=1;93:di=1;96:ex=1;31:ln=target'
