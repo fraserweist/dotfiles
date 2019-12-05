@@ -25,14 +25,11 @@ function print_header {
 
 # PUTTING FOLDERS WHERE THEY BELONG IN HOME
 print_header FOLDERS light_red
-for folder in *; do
-    if [ "$folder" != "install.sh" ] && [ "$folder" != "runcom" ] && \
-      [ "$folder" != "scripts" ]; then
-        ln -s $root/$folder $HOME
-        rm $HOME/.$folder
-        mv $HOME/$folder $HOME/.$folder
-        echo -e "    linking $folder at $HOME/.$folder/"
-    fi
+for folder in applescripts bash git iterm2 mutt tmux vim; do
+    ln -s $root/$folder $HOME
+    rm $HOME/.$folder
+    mv $HOME/$folder $HOME/.$folder
+    echo -e "    linking $folder at $HOME/.$folder/"
 done
 
 # VARIOUS DOTFILES AND RC FILES IN HOME

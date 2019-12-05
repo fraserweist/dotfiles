@@ -22,4 +22,4 @@ parse_git_branch() {
 PS1="${debian_chroot:+($debian_chroot)}${GREEN} \u ${GREEN_TO_BLUE}${BLUE} \w ${BLUE_TO_PURPLE}${PURPLE}\$(parse_git_branch) ${PURPLE_TO_RESET}${RESET}\n>> "
 
 # for ls colors
-export LSCOLORS=GxFxCxDxBxegedabagaced
+export LS_COLORS='fi=1;95:di=1;94:ex=1;31:ln=target'
