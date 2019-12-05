@@ -84,6 +84,7 @@ fi
 
 print_header OTHER light_purple
 echo -e "    installing powerline fonts"
+git submodule update
 cd $root/powerline-fonts
 ./install.sh > /dev/null 2>&1
 echo -e "    installing vim plugins"
