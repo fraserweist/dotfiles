@@ -25,7 +25,7 @@ function print_header {
 
 # PUTTING FOLDERS WHERE THEY BELONG IN HOME
 print_header FOLDERS light_red
-for folder in applescripts bash git iterm2 mutt tmux vim; do
+for folder in applescripts git iterm2 mutt tmux vim; do
     ln -s $root/$folder $HOME
     rm $HOME/.$folder
     mv $HOME/$folder $HOME/.$folder
