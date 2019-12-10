@@ -1,0 +1,19 @@
+#!/usr/bin/env python3.7
+
+import sys
+import argparse
+
+def arg_parser():
+    parser = argparse.ArgumentParser(
+        prog="rgb", description="print ANSI escape code for rgb triad"
+    )
+    for color in ["red", "green", "blue"]:
+        parser.add_argument(
+            color, type=int, help=f"{color} portion of triad"
+        )
+    return parser
+
+
+if __name__ == "__main__":
+    args = arg_parser().parse_args()
+    print(f"\\033[38;2;{args.red};{args.green};{args.blue}m")
